@@ -120,7 +120,7 @@ console.log(5 + 'を' + 3 + 'で割った余りは' + remainder(5,3) + 'です�
 
 // 応用編問題
 // Q1
-let random = Math. random();
+let random = Math. floor(Math. random() * 11);
 console.log(random);
 
 // Q2
