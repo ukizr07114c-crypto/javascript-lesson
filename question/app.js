@@ -1,9 +1,9 @@
 // 基礎編問題
 // Q1
-let nickname = '私のニックネームはごっしーです。';
-let age = '年齢は28歳です';
+const nickname = 'ごっしー';
+const age = 28;
 
-console.log(nickname + age);
+console.log('私の名前は' + nickname + 'です。年齢は' + age + '歳です。')
 
 // Q2
 let languages = ['JavaScript', 'PHP', 'Ruby', 'Python', 'Go'];
@@ -42,10 +42,14 @@ let playerList = [
 console.log(playerList[1].favorites[1]);
 
 // Q5
-let avarage = playerList[0].age + playerList[1].age + playerList[2].age;
-avarage /= 3;
+let average = 0;
 
-console.log(avarage);
+for (let n = 0; n <  playerList.length; n++ ){average += playerList[n].age}
+
+average /= playerList.length
+
+console.log(average);
+
 
 // Q6
 function sayHello() {
@@ -131,13 +135,13 @@ function Hello(){
 setTimeout(Hello, 3000);
 
 // Q3
-let num = 7
+let num = 0
 
 if (num > 0) {
   console.log('num is greater than 0');
-} else if (num <= 0) {
+} else if (num < 0) {
   console.log('num is less than 0');
-} else if (num = o) {
+} else if (num === 0) {
   console.log('num is 0')
 }
 
@@ -154,11 +158,11 @@ console.log(numbers);
 let mixed = [4, '2', 5, '8', '9', 0, 1];
 
 for (let n = 0; n < mixed.length; n++) {
-    if (mixed[n] % 2 === 0 && typeof mixed[n] === 'number') {
-      console.log('even');
-    } else if (mixed[n] % 2 === 1 && typeof mixed[n] === 'number') {
+    if (typeof mixed[n] !== 'number') {
+      console.log('not number');
+    } else if (mixed[n] % 2 === 1) {
       console.log('odd');
     } else {
-      console.log('not number');
+      console.log('even');
     }
   }
